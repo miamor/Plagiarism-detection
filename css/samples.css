@@ -1,0 +1,72 @@
+@import "http://fonts.googleapis.com/css?family=Ubuntu:400,500";
+@font-face{font-family:"Roboto";font-style:normal;font-weight:300;src:local("Roboto Light"),local(Roboto-Light),url('assets/dist/fonts/roboto-light.woff') format("woff")}
+@font-face{font-family:"Roboto";font-style:normal;font-weight:400;src:local("Roboto Regular"),local(Roboto-Regular),url('assets/dist/fonts/roboto.woff') format("woff")}
+@font-face{font-family:"Roboto";font-style:normal;font-weight:700;src:local("Roboto Bold"),local(Roboto-Bold),url('assets/dist/fonts/roboto-bold.woff') format("woff")}
+
+body{color:#141414;*padding:30px 50px;font-family:'Roboto Condensed', 'Roboto', 'proximanova', arial, helvetica;line-height:24px}
+.page-head, .intro, .test, .examples, .page-foot{background:#fbfbfb;border:1px solid #eee;border-width:1px 0;padding:25px 50px;margin-bottom:-1px;*margin:0 -50px -1px}
+.page-head{padding:40px 50px 10px}
+h2, h1, h3:not(.ppd){margin-top:0}
+.intro, .examples{background:#fff}
+
+a{text-decoration:none!important}
+h4{margin-top:25px}
+.left{float:left} .right{float:right} .center{text-align:center}
+.bold, .strong{font-weight:600} .italic{font-style:italic}
+.loading{padding:10px}
+.clearfix{float:none!important;clear:both}
+.img-circle{border-radius:100%}
+.no-padding{padding:0!important} .no-padding-top{padding-top:0!important} .no-padding-right{padding-right:0!important} .no-padding-bottom{padding-bottom:0!important} .no-padding-left{padding-left:0!important} 
+table td{border-color:#eee!important}
+blockquote{font-size:18px;line-height:26px;color:#999;font-style:italic;font-family: Cambria, Georgia, serif;*quotes: "\201C""\201D""\2018""\2019"}
+/*blockquote:before {position:absolute;color: #ccc;content: open-quote;font-size: 4em;line-height: 0.1em;margin-top:10px;margin-left: -5px;vertical-align: -0.4em}
+*/
+
+.pair .one:nth-child(2n+1){padding-left:0!important}
+.pair .one:nth-child(2n){padding-right:0!important}
+.line{position:relative;padding:8px 8px}
+.line:nth-child(2n+1) td{background:#fff}
+.line:nth-child(2n) td{background:#fafafa}
+.line > i{position:absolute;width:20px;left:-20px;text-align:right;color:#bbb}
+.tbl td{padding:0 10px;width:25%!important}
+.compare i, .ppd i{padding:2px 6px 4px;background:#555;color:#fff;padding:4px 7px;*box-shadow:inset 0 3px 5px -3px rgba(0,0,0,.4);box-shadow:inset 0 2px 3px rgba(0,0,0,.2);border-radius:3px}
+.compare p{color:#777}
+#p1 i{background:#1E90FF}
+#p2 i{background:#008000}
+#p3 i{background:#A52A2A}
+#p4 i{background:#800080}
+#p5 i{background:#E0064B}
+#p6 i{background:#FE6D17}
+#p7 i{background:#D03A86}
+.pair{margin-bottom:35px;padding-bottom:25px;border-bottom:2px dashed #ddd}
+.detect{font-size:20px;padding:8px 15px;display:inline-block;border-radius:3px;text-transform:capitalize;margin:10px 30px 15px}
+.detected{background:#F04545;color:#fff}
+.safe{background:#5cb85c;color:#fff}
+.detect .small{font-size:13px}
+.toggle-open{cursor:pointer;margin-bottom:0}
+.hash-tbl-open{border-bottom:1px solid #e6e6e6;padding:5px 10px}
+.hash-tbl{padding:8px 20px;max-height:300px;overflow:auto}
+.toTokens .token:nth-child(4n+1){color:#A52A2A}
+.toTokens .token:nth-child(4n+2){color:#008000}
+.toTokens .token:nth-child(4n+3){color:#003468}
+.toTokens .token:nth-child(4n){color:#590259}
+.compare{margin-top:70px}
+.compare-one{padding:0;*border-top:1px solid #eaeaea}
+.compare-one.detected{background:rgba(198, 251, 198, .2)}
+pre{line-height:17px;width:100%;max-height:200px;overflow:auto;white-space:pre-line;border:1px solid #eee;background:#f7f7f7;padding:10px}
+pre.code{height:200px}
+pre.toTokens{height:140px}
+table, tbody, tr{position:relative;width:100%}
+.pp{float:left;width:49%;margin:0 .5%}
+.eg{color:#666;font-style:italic}
+.note{color:#505050;font-style:italic}
+.gensmall{font-style:italic;font-size:11px;color:#999}
+.anchorList{}
+.anchorList.fixed{position:fixed;top:10px;right:10px;width:230px;background:#fff;border:1px solid #eee}
+.anchorList li:not(.active){display:none}
+.anchorList:hover li{display:block}
+.anchorLink a, .toc-ul-root a{display:block;padding:3px 15px;border-left:2px solid #e5e5e5;color:#999;font-size:13px}
+.anchorLink a:hover, .anchorLink.active a, .toc-ul-root a:hover, .toc-ul-root li.active a{border-color:#1E90FF;color:#1E90FF;font-size:15px;background:transparent!important}
+.toc-anchor{margin-left:6px}
+
+.submit h4{margin-top:0}
