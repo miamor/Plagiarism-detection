@@ -1,0 +1,150 @@
+#include <iostream>
+
+using namespace std;
+
+//return length
+int stringLength(char str[])
+{
+int n=0;
+while(str[n]!=NULL)
+{
+n++;
+}
+return n;
+}
+
+//return the index of matching string
+int findString(char mainStr[], char subStr[])
+{
+
+int m=stringLength(mainStr);
+int s=stringLength(subStr);
+int j=0,flag,index;
+
+for(int i=0;i<m;i++){
+flag=0;
+if(mainStr[i]==subStr[j]){
+index=i;
+while(j<s){
+if(mainStr[i]!=subStr[j])
+flag=1;
+j++;
+i++;
+}
+if(j==s && flag==0)
+return index;
+}
+}
+return -1;
+}
+//function to replace With Bigger String
+void replaceWithBiggerString(char mainStr[], char replaceStr[], int index, int lengthFindStr)
+{
+int n=stringLength(mainStr);
+int i=index+lengthFindStr;
+int r=stringLength(replaceStr);
+while(i<n){
+replaceStr[r]=mainStr[i];
+r++;
+i++;
+}
+
+n=stringLength(replaceStr);
+i=0;
+while(i<n){
+mainStr[index+i]=replaceStr[i];
+i++;
+
+}
+}
+//replaceWithSmallerString function
+void replaceWithSmallerString(char mainStr[], char replaceStr[], int index, int lengthFindStr)
+{
+int n=stringLength(mainStr);
+int i=index+lengthFindStr;
+int r=stringLength(replaceStr);
+while(i<n){
+replaceStr[r]=mainStr[i];
+
+r++;
+i++;
+}
+
+n=stringLength(replaceStr);
+i=0;
+while(i<n){
+mainStr[index+i]=replaceStr[i];
+i++;
+
+}
+}
+//equal string replace function
+void replaceWithEqualString(char mainStr[], char replaceStr[], int index)
+{
+int n=stringLength(replaceStr);
+int i=0;
+while(i<n){
+mainStr[index+i]=replaceStr[i];
+i++;
+
+}
+
+}
+
+//find length and call function depends on length
+int findReplace(char mainStr[], char findStr[],char replaceStr[])
+{
+int index=findString(mainStr, findStr);
+if(index==-1)
+return -1;
+int len=stringLength(findStr);
+if(stringLength(findStr)<stringLength(replaceStr))
+replaceWithBiggerString(mainStr,replaceStr,index,len);
+
+else if(stringLength(findStr)>stringLength(replaceStr))
+replaceWithSmallerString(mainStr,replaceStr,index,len);
+
+else
+replaceWithEqualString(mainStr,replaceStr,index);
+
+
+return 1;
+}
+
+//test the functions
+void testFindReplace()
+{
+	char mainstr[200] = "C++ is so great and fun";
+	char findstr[50] = "great and";
+	char replacestr1[50] = "nice";
+	char replacestr2[50] = "nice and simple and";
+
+	//get user inputs:
+	cout << "\n\nenter main string : ";
+	cin.getline(mainstr,100);
+    int p= stringLength(mainstr);
+	cout << "\n\nenter find string : ";
+	cin.getline(findstr, 70);
+
+	cout << "\n\nenter replace string : ";
+	cin.getline(replacestr1, 70);
+
+	if (findReplace(mainstr, findstr, replacestr1) != -1)
+	{    
+	    for (int i=0; i<=p ; i++)
+	    {
+		  cout << mainstr[i];
+		}
+	}
+	else
+		cout << "\replace string not found\n";
+
+	cout << findString(mainstr, findstr);
+
+}
+int main()
+{
+//call the test function
+testFindReplace();
+return 0;
+}
